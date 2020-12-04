@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Projects</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/projects.css">
+
+  <body onload="createAndDisplayDB();">
+    <div class="main">
+      <nav>
+        <div>
+          <a href="index.html">
+          <img class="logo" src="bg\logo\logo4_2.png"></img>
+        </div>
+        <ul>
+          <li><a href="about.html">about</a></li>
+          <li><a href="cv.xml">cv</a></li>
+          <li><a href="art.html">Art</a></li>
+          <li><a href="photography.html">photography</a></li>
+          <li><a href="anime.html">Anime</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+        <br>
+      </div>
+
+      <div class="header">
+        <table>
+          <tr>
+            <td>
+              <h1>My Projects</h1><br></td>
+          </tr>
+          <tr>
+            <td valign="top" class="info">
+              <h3>Discord Bot</h3>
+              <p>Me and my friends had decided to make a bot on discord using discord.js which is a powerful node.js module that allows you to interact with the Discord API very easily. Discord is a software that lets you create/join servers in which you can talk,
+                chat, hang out and stay close with communities and your friends. You can check out more about our bot
+                <a href="https://slavbot.com/">here.</a>
+              </p>
+              <img id="slav" src="https://bots.ondiscord.xyz/bots/319533843482673152/embed?theme=dark&amp;showGuilds=true" alt="Slav Bot">
+            </td>
+          </tr>
+
+          <tr>
+            <td valign="top" class="info">
+              <br>
+              <h3>Designing a Network</h3>
+              <p>This was a team project for my CSIT127 subject so the aim of this project is to successfully create a network design of a new Wollongong University Campus in Abu Dhabi. As per the requirements, there are two floors, amongst them we used the ground
+                floor for the faculty and admin offices, the top floor for the classrooms and labs. There are 10 classrooms, 4 labs, 8 faculty offices, 5 admin offices and 1 datacenter. This is the overview of the whole network.
+              </p>
+              <img src="dep/127.png" alt="picture of the network">
+            </td>
+          </tr>
+
+          <tr>
+            <td valign="top" class="info">
+              <br>
+              <h3>Working with AR filters</h3>
+              <p>I really got interested in augmented reality (AR) and wanted to try it out myself so during the summer break I took some time out learning how to model simple objects and how to use Spark AR, a software by Facebook which helps you easily export
+                your filters to all social media platforms. I had come up with an idea of having button as eyes for the filter (I took the inspiration from the animated movie Coraline), so I had quickly made a model which went through 5 changes before the final one,
+                then imported it in the software and wrote some lines of code so that the buttons can stay on the eyes. This is how my filter performed since its release.
+              </p>
+              <img src="dep/cora.png" alt="picture of the filters statistics">
+            </td>
+          </tr>
+
+        </table>
+
+        <form>
+          <div class="form-group">
+            <label>
+              <h2 style="text-align: left;">Your comment</h2>
+            </label><br>
+            <div class="stuff">
+              <textarea class="form-control" rows="5" cols="50" name="task" id="task"></textarea><br>
+              <a class="button6" onclick="addComment()">Add Comment</a>
+              <a class="button6" style="background-color:#668fff" onclick="clearDatabase()">Clear Comment Section</a>
+            </div>
+          </div>
+        </form>
+        <div class="container">
+          <h2>
+            <b>Comment Section</b>
+          </h2>
+          <h4>
+            <ol id="OutputSection"></ol>
+          </h4>
+        </div>
+
+      </div>
+
+      <script type="text/javascript">
+        var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+        function createAndDisplayDB() {
+          db.transaction(function (tx) {
+            tx.executeSql('CREATE TABLE IF NOT EXISTS COMMENT (id INTEGER PRIMARY KEY, comment VARCHAR)');
+          });
+
+          //display all records in table
+          db.transaction(function (tx) {
+            tx.executeSql('SELECT * FROM COMMENT', [], function (tx, results) {
+              var len = results.rows.length;
+              for (var i = 0; i < len; i++) {
+                createNewComment(results.rows.item(i).comment);
+              }
+
+            }, null);
+          });
+        }
+
+        function createNewComment(comment) {
+          var paragraph = document.createElement("p");
+          paragraph.innerHTML += comment;
+          document.getElementById("OutputSection").appendChild(paragraph);
+          console.log("Output Section: " + document.getElementById("OutputSection").innerHTML);
+        }
+
+        function addComment() {
+          var comment = document.getElementById("task").value;
+          var query = `INSERT INTO COMMENT (comment) VALUES ("${comment}")`;
+          db.transaction(function (tx) {
+            tx.executeSql(query);
+          });
+
+          createNewComment(comment);
+          resetInput();
+        }
+
+        function resetInput() {
+          document.getElementById("task").value = "";
+        }
+
+        function clearDatabase() {
+          db.transaction(function (tx) {
+            tx.executeSql('DELETE FROM COMMENT');
+            document.getElementById("OutputSection").innerHTML = "";
+          });
+        }
+      </script>
+
+    </body>
+  </html>

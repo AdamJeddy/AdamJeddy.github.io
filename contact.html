@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/contact.css">
+
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="bg\logo\logo4_2.png"></img>
+          </div>
+          <ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="cv.xml">cv</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="photography.html">photography</a></li>
+            <li><a href="anime.html">Anime</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+        <br/>
+      </div>
+
+      <div class="header">
+        <h1>contact</h1>
+        <div class="form">
+          <form class="" action="contact.php" method="post">
+            <label for="fname">Your Name:</label>
+            <input type="text" id="name" name="name" pattern="[A-Za-z]{1,}" placeholder="Your full name" required="required"/>
+            <!--onchange="validateName()" -->
+
+            <label class="required" for="email">Your email:</label><br/>
+            <input id="email" class="email" name="email" type="text" size="30" pattern="[\w\.]+@([\w]+\.)+[\w-]{2,4}" placeholder="example@domain.com" required="required"/><br/>
+
+            <label for="city">Which city do you live</label>
+            <select id="city" name="city">
+              <option value="Umm">Do not live in the UAE</option>
+              <option value="AbuDhabi">Abu Dhabi</option>
+              <option value="Ajman">Ajman</option>
+              <option value="Dubai">Dubai</option>
+              <option value="Fujairah">Fujairah</option>
+              <option value="Sharjah">Sharjah</option>
+              <option value="Umm">Umm Al Quwain</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" pattern="\w{1,}" placeholder="What are you writing to me about" required="required"/>
+
+            <label class="required" for="message">Your message:</label><br/>
+            <textarea id="message" class="input" name="message" rows="7" cols="30" placeholder="Your message goes here" required="required"></textarea><br/>
+
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </body>
+  </html>

@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+}
+nav {
+  width: 100%;
+  height: 50px;
+  min-width: 100%;
+  background-color: #0007;
+  line-height: 50px;
+}
+img {
+  height: 5%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin-left: 0.5%;
+  margin-top: 2px;
+}
+nav ul {
+  float: right;
+  margin-right: 30px;
+}
+nav ul li {
+  font-family: 'Major Mono Display';
+  font-size: 20px;
+  list-style-type: none;
+  display: inline-block;
+  transition: 0.7s all;
+}
+nav ul li:hover {
+  background-color: #f39d1a;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 20px;
+}
+h1 {
+  font-family: 'Major Mono Display', 'Syncopate', sans-serif;
+  color: #000000;
+  /* color: #ffffff; */
+  letter-spacing: 0.5vw;
+  line-height: 1.2;
+  font-size: 3vw;
+  text-align: center;
+  span {
+    display: block;
+    font-size: 10vw;
+    letter-spacing: -1.3vw;
+  }
+}
+.header {
+  position: absolute;
+  left: 30%;
+  top: 45%;
+  background: url("../bg/HolographicBg/06.png");
+  opacity: 0.75;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #f1f1f1;
+  padding: 20px;
+  border-radius: 25px;
+}

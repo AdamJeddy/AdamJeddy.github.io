@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Anime</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/anime.css">
+
+  <body onload="loadJSON()">
+    <div class="main">
+      <nav>
+        <div>
+          <a href="index.html">
+          <img class="logo" src="bg\logo\logo4_2.png"></img>
+        </div>
+        <ul>
+          <li><a href="about.html">about</a></li>
+          <li><a href="cv.xml">cv</a></li>
+          <li><a href="art.html">Art</a></li>
+          <li><a href="photography.html">photography</a></li>
+          <li><a href="anime.html">Anime</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+      <br>
+    </div>
+
+    <div class="header">
+      <table id="demo">
+      </table>
+    </div>
+
+    <script>
+      function loadJSON() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+            processReceipt(xhttp);
+          }
+        };
+        xhttp.open("GET", "anime.json", true);
+        xhttp.send();
+      }
+
+      function processReceipt(xhttp) {
+        var JsonText = xhttp.responseText;
+        var obj = JSON.parse(JsonText);
+        display(obj);
+      }
+
+      function display(obj) {
+        var table = "<table><tr> <td><h1>My Anime Recommendations</h1><br></td></tr>";
+
+        for (var i in obj.anime) {
+          table += "<tr><td><h2>" + obj.anime[i].NAME + "</h2><img src=" + obj.anime[i].IMAGE + " style='float: right;'>";
+          table += "<p>" + obj.anime[i].REVIEW + "</p>";
+          table += "<p>you can get the book <a href=" + obj.anime[i].BOOK+ ">here</a> and watch the tv series <a href=" + obj.anime[i].SHOW + ">here</a>";
+          table += "</tr></td>";
+        } //for end
+
+        table += "</table>"
+        document.getElementById("demo").innerHTML = table;
+      }
+    </script>
+  </body>
+</html>
