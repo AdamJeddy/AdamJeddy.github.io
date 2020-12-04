@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="common.css"?>
+<?xml-stylesheet type="text/xsl" href="cv.xsl" ?>
+
+<cv>
+  <education>
+    <name>University of Wollongong in Dubai (UOWD)</name>
+    <year>    2019 - Present</year>
+    <subjects>
+        <sub>Programming Fundamentals</sub>
+    </subjects>
+    <subjects>
+        <sub>Object Oriented Design and Programming</sub>
+    </subjects>
+    <subjects>
+        <sub>Networks and Communications</sub>
+    </subjects>
+    <subjects>
+        <sub>System Analysis and Design</sub>
+    </subjects>
+  </education>
+  <education>
+    <name>The Westminster School, Dubai (TWS)</name>
+    <year>    2007 - 2019</year>
+    <subjects>
+        <sub>Math</sub>
+    </subjects>
+    <subjects>
+        <sub>Biology, Chemistry, Physics</sub>
+    </subjects>
+    <subjects>
+        <sub>IT</sub>
+    </subjects>
+    <subjects>
+        <sub>English</sub>
+    </subjects>
+    <subjects>
+        <sub>Travel and Tourism</sub>
+    </subjects>
+  </education>
+  <computerskillsL>
+        <Languages>Java and JavaFx</Languages>
+  </computerskillsL>
+  <computerskillsL>
+        <Languages>C++</Languages>
+  </computerskillsL>
+  <computerskillsL>
+        <Languages>Python</Languages>
+  </computerskillsL>
+  <computerskillsL>
+        <Languages>Javascript</Languages>
+  </computerskillsL>
+  <computerskillsL>
+        <Languages>XML/XLST</Languages>
+  </computerskillsL>
+  <computerskillsL>
+        <Languages>SQL</Languages>
+  </computerskillsL>
+  <computerskillsS>
+        <software>Microsoft Suite</software>
+  </computerskillsS>
+  <computerskillsS>
+        <software>Cisco Packet Trace</software>
+  </computerskillsS>
+  <computerskillsS>
+        <software>Wireshark</software>
+  </computerskillsS>
+  <computerskillsS>
+        <software>Java Scene Builder</software>
+  </computerskillsS>
+  <computerskillsS>
+        <software>Spark Ar</software>
+  </computerskillsS>
+  <computerskillsS>
+        <software>Unity</software>
+  </computerskillsS>
+  <computerskillsS>
+        <software>Unreal Engine 4</software>
+  </computerskillsS>
+
+  <certification>
+      <ai>SAP</ai>
+  </certification>
+  <certification>
+      <ai>Microsoft</ai>
+  </certification>
+  <certification>
+      <ai>Autodesk</ai>
+  </certification>
+  <certification>
+      <ai>IBM</ai>
+  </certification>
+  <certification>
+      <ai>Careem</ai>
+  </certification>
+  <certification>
+      <ai>Sypron Solutions</ai>
+  </certification>
+  <certification>
+      <ai>Arduino, Robotic Arm and Drones</ai>
+  </certification>
+</cv>

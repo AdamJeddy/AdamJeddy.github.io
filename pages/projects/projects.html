@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Projects</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: url("../../bg/HolographicBg/02.png") repeat-y;
+    }
+    .main {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+    nav {
+      width: 100%;
+      height: 50px;
+      min-width: 100%;
+      background-color: #0007;
+      line-height: 50px;
+    }
+    .logo {
+      height: 5%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      margin-left: 0.5%;
+      margin-top: 2px;
+    }
+    nav ul {
+      float: right;
+      margin-right: 30px;
+    }
+    nav ul li {
+      font-family: 'Major Mono Display';
+      font-size: 20px;
+      list-style-type: none;
+      display: inline-block;
+      transition: 0.7s all;
+    }
+    nav ul li:hover {
+      background-color: #f39d1a;
+    }
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 20px;
+    }
+    h1,
+    h2 {
+      font-family: 'Questrial', 'Chakra Petch', 'Syncopate', sans-serif;
+      color: #000000;
+      letter-spacing: 0.5vw;
+      line-height: 1.2;
+      font-size: 3vw;
+      text-align: center;
+      span {
+        display: block;
+        font-size: 10vw;
+        letter-spacing: -1.3vw;
+      }
+    }
+    div.header {
+      position: absolute;
+      left: 10%;
+      right: 10%;
+      top: 10%;
+      width: auto;
+      height: auto;
+      background: url("../../bg/HolographicBg/05.png");
+      /*opacity: 0.75;*/
+      background-color: rgba(0, 0, 0, 0.75);
+      color: #f1f1f1;
+      padding: 20px;
+      border-radius: 25px;
+    }
+    p,
+    td {
+      font-family: 'Chakra Petch', 'Syncopate', sans-serif;
+      color: #000000;
+      font-size: 28px;
+    }
+    .me {
+      opacity: 1;
+    }
+    .info {
+      width: 800px;
+    }
+    table {
+      width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    button {
+      left: 10%;
+      right: 10%;
+    }
+    a.button6 {
+      display: inline-block;
+      padding: 0.7em 1.4em;
+      margin: 0 0.3em 0.3em 0;
+      border-radius: 0.15em;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Roboto',sans-serif;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: #FFFFFF;
+      background-color: #3369ff;
+      box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+      text-align: center;
+      position: relative;
+    }
+    a.button6:active {
+      top: 0.1em;
+    }
+    @media all and (max-width:30em) {
+      a.button6 {
+        display: block;
+        margin: 0.4em auto;
+      }
+    }
+  </style>
+  <body onload="createAndDisplayDB();">
+    <div class="main">
+      <nav>
+        <div>
+          <a href="..\index\index.html">
+            <img class="logo" src="..\..\bg\logo\logo4_2.png"></img>
+          </div>
+          <ul>
+            <li>
+              <a href="../about/about.html">about</a>
+            </li>
+            <li>
+              <a href="../cv/cv.xml">cv</a>
+            </li>
+            <li>
+              <a href="../art/art.html">Art</a>
+            </li>
+            <li>
+              <a href="../photography/photography.html">photography</a>
+            </li>
+            <li>
+              <a href="../anime/anime.html">Anime</a>
+            </li>
+            <li>
+              <a href="../projects/projects.html">projects</a>
+            </li>
+            <li>
+              <a href="../contact/contact.html">contact</a>
+            </li>
+          </ul>
+        </nav>
+        <br>
+      </div>
+
+      <div class="header">
+        <table>
+          <tr>
+            <td>
+              <h1>My Projects</h1><br></td>
+          </tr>
+          <tr>
+            <td valign="top" class="info">
+              <h3>Discord Bot</h3>
+              <p>Me and my friends had decided to make a bot on discord using discord.js which is a powerful node.js module that allows you to interact with the Discord API very easily. Discord is a software that lets you create/join servers in which you can talk,
+                chat, hang out and stay close with communities and your friends. You can check out more about our bot
+                <a href="https://slavbot.com/">here.</a>
+              </p>
+              <img id="slav" src="https://bots.ondiscord.xyz/bots/319533843482673152/embed?theme=dark&amp;showGuilds=true" alt="Slav Bot">
+            </td>
+          </tr>
+
+          <tr>
+            <td valign="top" class="info">
+              <br>
+              <h3>Designing a Network</h3>
+              <p>This was a team project for my CSIT127 subject so the aim of this project is to successfully create a network design of a new Wollongong University Campus in Abu Dhabi. As per the requirements, there are two floors, amongst them we used the ground
+                floor for the faculty and admin offices, the top floor for the classrooms and labs. There are 10 classrooms, 4 labs, 8 faculty offices, 5 admin offices and 1 datacenter. This is the overview of the whole network.
+              </p>
+              <img src="127.png" alt="picture of the network">
+            </td>
+          </tr>
+
+          <tr>
+            <td valign="top" class="info">
+              <br>
+              <h3>Working with AR filters</h3>
+              <p>I really got interested in augmented reality (AR) and wanted to try it out myself so during the summer break I took some time out learning how to model simple objects and how to use Spark AR, a software by Facebook which helps you easily export
+                your filters to all social media platforms. I had come up with an idea of having button as eyes for the filter (I took the inspiration from the animated movie Coraline), so I had quickly made a model which went through 5 changes before the final one,
+                then imported it in the software and wrote some lines of code so that the buttons can stay on the eyes. This is how my filter performed since its release.
+              </p>
+              <img src="cora.png" alt="picture of the filters statistics">
+            </td>
+          </tr>
+
+        </table>
+
+        <form>
+          <div class="form-group">
+            <label>
+              <h2 style="text-align: left;">Your comment</h2>
+            </label><br>
+            <div class="stuff">
+              <textarea class="form-control" rows="5" cols="50" name="task" id="task"></textarea><br>
+              <a class="button6" onclick="addComment()">Add Comment</a>
+              <a class="button6" style="background-color:#668fff" onclick="clearDatabase()">Clear Comment Section</a>
+            </div>
+          </div>
+        </form>
+        <div class="container">
+          <h2>
+            <b>Comment Section</b>
+          </h2>
+          <h4>
+            <ol id="OutputSection"></ol>
+          </h4>
+        </div>
+
+      </div>
+
+      <script type="text/javascript">
+        var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+        function createAndDisplayDB() {
+          db.transaction(function (tx) {
+            tx.executeSql('CREATE TABLE IF NOT EXISTS COMMENT (id INTEGER PRIMARY KEY, comment VARCHAR)');
+          });
+
+          //display all records in table
+          db.transaction(function (tx) {
+            tx.executeSql('SELECT * FROM COMMENT', [], function (tx, results) {
+              var len = results.rows.length;
+              for (var i = 0; i < len; i++) {
+                createNewComment(results.rows.item(i).comment);
+              }
+
+            }, null);
+          });
+        }
+
+        function createNewComment(comment) {
+          var paragraph = document.createElement("p");
+          paragraph.innerHTML += comment;
+          document.getElementById("OutputSection").appendChild(paragraph);
+          console.log("Output Section: " + document.getElementById("OutputSection").innerHTML);
+        }
+
+        function addComment() {
+          var comment = document.getElementById("task").value;
+          var query = `INSERT INTO COMMENT (comment) VALUES ("${comment}")`;
+          db.transaction(function (tx) {
+            tx.executeSql(query);
+          });
+
+          createNewComment(comment);
+          resetInput();
+        }
+
+        function resetInput() {
+          document.getElementById("task").value = "";
+        }
+
+        function clearDatabase() {
+          db.transaction(function (tx) {
+            tx.executeSql('DELETE FROM COMMENT');
+            document.getElementById("OutputSection").innerHTML = "";
+          });
+        }
+      </script>
+
+    </body>
+  </html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Anime</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: url("artbg.jpg") repeat-y;
+      }
+      .main {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+      video {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        min-width: 100%;
+        min-height: 100%;
+      }
+      nav {
+        width: 100%;
+        height: 50px;
+        min-width: 100%;
+        background-color: #0007;
+        line-height: 50px;
+      }
+      .logo {
+        height: 5%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin-left: 0.5%;
+        margin-top: 2px;
+      }
+      nav ul {
+        float: right;
+        margin-right: 30px;
+      }
+      nav ul li {
+        font-family: 'Major Mono Display';
+        font-size: 20px;
+        list-style-type: none;
+        display: inline-block;
+        transition: 0.7s all;
+      }
+      nav ul li:hover {
+        background-color: #f39d1a;
+      }
+      nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 20px;
+      }
+      h1 {
+        font-family: 'Questrial', 'Chakra Petch', 'Syncopate', sans-serif;
+        color: #000000;
+        letter-spacing: 0.5vw;
+        line-height: 1.2;
+        font-size: 3vw;
+        text-align: center;
+        span {
+          display: block;
+          font-size: 10vw;
+          letter-spacing: -1.3vw;
+        }
+      }
+      div.header {
+        position: absolute;
+        left: 20%;
+        right: 20%;
+        top: 10%;
+
+        width: auto;
+        height: auto;
+        background: url("../../bg/HolographicBg/05.png");
+        /*background-size: 1200px;
+        opacity: 0.75;*/
+        background-color: rgba(0, 0, 0, 0.75);
+        color: #f1f1f1;
+        padding: 20px;
+        border-radius: 25px;
+      }
+      td {
+        font-family: 'Chakra Petch', 'Syncopate', sans-serif;
+        color: #000000;
+        font-size: 28px;
+      }
+      .me {
+        opacity: 1;
+      }
+      .info {
+        width: 800px;
+      }
+      table {
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  <body onload="loadJSON()">
+    <div class="main">
+      <nav>
+        <div>
+          <a href="..\index\index.html">
+          <img class="logo" src="..\..\bg\logo\logo4_2.png"></img>
+        </div>
+        <ul>
+          <li><a href="../about/about.html">about</a></li>
+          <li><a href="../cv/cv.xml">cv</a></li>
+          <li><a href="../art/art.html">Art</a></li>
+          <li><a href="../photography/photography.html">photography</a></li>
+          <li><a href="../anime/anime.html">Anime</a></li>
+          <li><a href="../projects/projects.html">projects</a></li>
+          <li><a href="../contact/contact.html">contact</a></li>
+        </ul>
+      </nav>
+      <br>
+    </div>
+
+    <div class="header">
+      <table id="demo">
+      </table>
+    </div>
+
+    <script>
+      function loadJSON() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+            processReceipt(xhttp);
+          }
+        };
+        xhttp.open("GET", "anime.json", true);
+        xhttp.send();
+      }
+
+      function processReceipt(xhttp) {
+        var JsonText = xhttp.responseText;
+        var obj = JSON.parse(JsonText);
+        display(obj);
+      }
+
+      function display(obj) {
+        var table = "<table><tr> <td><h1>My Anime Recommendations</h1><br></td></tr>";
+
+        for (var i in obj.anime) {
+          table += "<tr><td><h2>" + obj.anime[i].NAME + "</h2><img src=" + obj.anime[i].IMAGE + " style='float: right;'>";
+          table += "<p>" + obj.anime[i].REVIEW + "</p>";
+          table += "<p>you can get the book <a href=" + obj.anime[i].BOOK+ ">here</a> and watch the tv series <a href=" + obj.anime[i].SHOW + ">here</a>";
+          table += "</tr></td>";
+        } //for end
+
+        table += "</table>"
+        document.getElementById("demo").innerHTML = table;
+      }
+    </script>
+  </body>
+</html>

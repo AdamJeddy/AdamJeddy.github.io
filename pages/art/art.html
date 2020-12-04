@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Art</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        position: relative;
+        width: 100%;
+        height: 175vh;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        background: url("loop.gif");
+        background-repeat: repeat;
+      }
+      nav {
+        width: 100%;
+        height: 50px;
+        min-width: 100%;
+        background-color: #0007;
+        line-height: 50px;
+      }
+      .logo {
+        height: 5%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin-left: 0.5%;
+        margin-top: 2px;
+      }
+      nav ul {
+        float: right;
+        margin-right: 30px;
+      }
+      nav ul li {
+        font-family: 'Major Mono Display';
+        font-size: 20px;
+        list-style-type: none;
+        display: inline-block;
+        transition: 0.7s all;
+      }
+      nav ul li:hover {
+        background-color: #f39d1a;
+      }
+      nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 20px;
+      }
+      h1 {
+        font-family: 'Questrial', 'Chakra Petch', 'Syncopate', sans-serif;
+        color: #000000;
+        letter-spacing: 0.5vw;
+        line-height: 1.2;
+        font-size: 3vw;
+        text-align: center;
+        span {
+          display: block;
+          font-size: 10vw;
+          letter-spacing: -1.3vw;
+        }
+      }
+      div.header {
+        position: absolute;
+        left: 15%;
+        right: 15%;
+        top: 10%;
+
+        width: auto;
+        height: auto;
+        background: url("../../bg/MarblingTexturesVol3/3.jpg");
+        background-color: rgba(0, 0, 0, 0.75);
+        color: #f1f1f1;
+        padding: 20px;
+        border-radius: 25px;
+      }
+      td {
+        font-family: 'Chakra Petch', 'Syncopate', sans-serif;
+        color: #000000;
+        font-size: 28px;
+      }
+      .me {
+        opacity: 1;
+      }
+      .info {
+        width: 800px;
+      }
+      table {
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .red {
+        width: 10%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      div.gallery {
+        margin: 5px;
+        border: 0.5px solid #ccc;
+        float: left;
+        width: 250px;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        width: 10%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    </style>
+  <body>
+    <div class="main">
+      <nav>
+        <div>
+          <a href="..\index\index.html">
+          <img class="logo" src="..\..\bg\logo\logo4_2.png"></img>
+        </div>
+        <ul>
+          <li><a href="../about/about.html">about</a></li>
+          <li><a href="../cv/cv.xml">cv</a></li>
+          <li><a href="../art/art.html">Art</a></li>
+          <li><a href="../photography/photography.html">photography</a></li>
+          <li><a href="../anime/anime.html">Anime</a></li>
+          <li><a href="../projects/projects.html">projects</a></li>
+          <li><a href="../contact/contact.html">contact</a></li>
+        </ul>
+      </nav>
+      <br>
+    </div>
+
+    <div class="header">
+      <table>
+        <tr>
+          <td colspan="4"><h1>My Art Gallery</h1><br></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/1.png">
+                <img src="preview/1.jpg" width="800" height="600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/2.png">
+                <img src="preview/2.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/3.png">
+                <img src="preview/3.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/4.png">
+                <img src="preview/4.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/5.png">
+                <img src="preview/5.jpg" width="800" height="600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/6.png">
+                <img src="preview/6.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/7.png">
+                <img src="preview/7.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/8.png">
+                <img src="preview/8.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/9.png">
+                <img src="preview/9.jpg" width="800" height="600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/10.png">
+                <img src="preview/10.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/11.png">
+                <img src="preview/11.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/12.png">
+                <img src="preview/12.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/13.png">
+                <img src="preview/13.jpg" width="800" height="600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/14.png">
+                <img src="preview/14.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/15.png">
+                <img src="preview/15.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/16.png">
+                <img src="preview/16.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/17.png">
+                <img src="preview/17.jpg" width="800" height="600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/18.png">
+                <img src="preview/18.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/19.png">
+                <img src="preview/19.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank" href="pictures/20.png">
+                <img src="preview/20.jpg" width="2400" height="1600">
+              </a>
+              <div class="desc"><a class="a-heart"><img src="whiteHeart.png" id="heart" class="red" onclick="change(this)"></a></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script type="text/javascript">
+      function change(pic) {
+        pic.src="redHeart.png";
+      }
+
+      let heart = document.getElementById('heart');
+        heart.addEventListener('click',()=>{
+            if(heart.classList.contains('red')){
+                heart.classList.remove('red');
+                heart.classList.add('white');
+                heart.src = 'whiteHeart.png';
+            }else{
+                heart.classList.remove('white');
+                heart.classList.add('red');
+                heart.src = 'redHeart.png';
+            }
+        });
+    </script>
+  </body>
+</html>
