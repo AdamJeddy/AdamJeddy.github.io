@@ -29,4 +29,4 @@ This is the current structure of the website (8 pages):
    - Review page where I recommend my favourite Japanese animated series.
 
 8. Contact
-   - A form which you can fill up which basically sends me an email so you can get in contact with me.
+   - A form which sends me an email so you can get in contact with me.
