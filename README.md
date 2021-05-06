@@ -4,7 +4,7 @@ This do be my e-portfolio
 I've made this website/e-portfolio for my project; however, I’ll be making changes as time goes on 
 since I don’t really like where the website stands today.
 
-This is the current structure of the website (8 pages):
+## Current structure of the website (8 pages)
 1. Landing Page
    - The websites home page, arrive here when you first land on the website
    - There is a logo on the top right corner of all the webpages that redirects you back to this page.
