@@ -1,7 +1,7 @@
 # AdamJeddy.github.io
 This do be my e-portfolio
 
-This website was made for my project; however, I’ll be making changes as time goes on 
+I've made this website/e-portfolio for my project; however, I’ll be making changes as time goes on 
 since I don’t really like where the website stands today.
 
 This is the current structure of the website (8 pages):
